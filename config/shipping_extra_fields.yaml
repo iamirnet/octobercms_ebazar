@@ -1,0 +1,21 @@
+# ===================================
+#  Extended Shipping Field Definitions
+# ===================================
+
+ebazar_type:
+    label: iamirnet.ebazar::lang.ebazar.ebazar_type
+    span: auto
+    type: dropdown
+    tab: 'iamirnet.ebazar::lang.ebazar.title'
+    oc.commentPosition: ''
+    options:
+        none: iamirnet.ebazar::lang.ebazar.none
+        pishtaz: iamirnet.ebazar::lang.ebazar.pishtaz
+        custom: iamirnet.ebazar::lang.ebazar.custom
+        pleasant: iamirnet.ebazar::lang.ebazar.pleasant
+ebazar_free:
+    label: 'iamirnet.ebazar::lang.ebazar.free'
+    oc.commentPosition: ''
+    span: auto
+    type: text
+    tab: 'iamirnet.ebazar::lang.ebazar.title'

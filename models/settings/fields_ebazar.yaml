@@ -1,0 +1,19 @@
+fields:
+  base:
+    label: iamirnet.ebazar::lang.ebazar.setting
+    type: section
+  ebazar_username:
+    label: iamirnet.ebazar::lang.ebazar.username
+    span: auto
+    type: text
+    oc.commentPosition: ''
+  ebazar_password:
+    label: iamirnet.ebazar::lang.ebazar.password
+    span: auto
+    type: text
+    oc.commentPosition: ''
+  ebazar_api_token:
+    label: iamirnet.ebazar::lang.ebazar.api_token
+    span: auto
+    type: text
+    oc.commentPosition: ''

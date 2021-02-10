@@ -1,0 +1,8 @@
+# ===================================
+#  Extended Product Field Definitions
+# ===================================
+
+ebazar_post:
+    label: iamirnet.ebazar::lang.ebazar.ebazar_code
+    tab: azarinweb.minimall::lang.product.description
+    span: auto
