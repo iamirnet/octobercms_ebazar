@@ -10,7 +10,7 @@ trait Functions
     {
         $new = false;
         if (!$this->api_token) $new = true;
-        if ($this->api_time && $this->api_time + 3300 < time()) $new = true;
+        if (!$this->api_time || $this->api_time + 3300 < time()) $new = true;
         if ($new) {
             $result = $this->__curl(http_build_query([
                 "username" => $this->username,
@@ -37,7 +37,6 @@ trait Functions
             'Content-Type: application/json',
             'Authorization: Bearer ' . $this->api_token,);
         $result = $this->__curl(is_array($data) ? json_encode($data) : $data, $this->domain . $this->version . $this->urls[$url], $headers);
-
         if (isset($result->ResCode) && $result->ResCode == 0) {
             return (object)['status' => true, 'result' => $result->Data];
         } else {

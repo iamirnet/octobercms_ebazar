@@ -1,6 +1,6 @@
 fields:
   base:
-    label: iamirnet.ebazar::lang.ebazar.setting
+    label: iamirnet.ebazar::lang.ebazar.title
     type: section
   ebazar_username:
     label: iamirnet.ebazar::lang.ebazar.username

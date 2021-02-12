@@ -68,7 +68,7 @@ trait Orders
             if ($product)
                 $this->products[] = $product;
         }
-
+        return $this->products;
     }
 
     public function setOrderProduct($product, $quantity)
@@ -85,8 +85,8 @@ trait Orders
 
     public function addParcel($order)
     {
+        $order = $this->getOrder($order);
         if (in_array($order->shipping['method']['ebazar_type'], ['pishtaz', 'custom', 'pleasant'])){
-            $this->getOrder($order);
             $this->setOrderProducts();
             $this->getState($this->order->shipping_address['state']['name']);
             $this->getCity($this->order->shipping_address['city']);
@@ -115,6 +115,7 @@ trait Orders
             }
             return true;
         }
+        return false;
     }
 
     public static function _addParcel($order)

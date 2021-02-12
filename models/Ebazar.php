@@ -18,6 +18,6 @@ class Ebazar
         $this->api_token = (string) EbazarSettings::get('ebazar_api_token');
         $this->api_time = (string) EbazarSettings::get('ebazar_api_time');
         $this->checkToken();
-        //$this->shipping = \Session::get('shipping') ? : [];
+        $this->shipping = \Session::get('shipping') ? : [];
     }
 }
