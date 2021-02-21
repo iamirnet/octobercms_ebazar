@@ -147,16 +147,16 @@ trait Orders
             $variables[] = $this->serviceType;
             if ($method->ebazar_free && $method->ebazar_free * 10 < $totals->productPostTaxes()){
                 $price = 0;
-                $this->shipping['free'] = false;
+                $this->shipping['free'] = true;
             } elseif (isset($this->shipping['price']) && $this->shipping['price'] && isset($this->shipping['hash']) && $this->shipping['hash'] == md5(serialize($variables))){
                 $price = $this->shipping['price'];
-                $this->shipping['free'] = true;
+                $this->shipping['free'] = false;
             }else{
                 $amount = $this->getAmount(...$variables);
                 $price = $amount ? ($amount->ShippingCost + $amount->ShippingTax) * 10 : 0;
                 $this->shipping['price'] = $price;
                 $this->shipping['hash'] = md5(serialize($variables));
-                $this->shipping['free'] = true;
+                $this->shipping['free'] = false;
             }
         }else{
             $price = $method->price()->integer;

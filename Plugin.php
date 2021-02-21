@@ -66,7 +66,7 @@ class Plugin extends PluginBase
                 'label'       => 'iamirnet.ebazar::lang.ebazar.title',
                 'description' => 'iamirnet.ebazar::lang.ebazar.description',
                 'category'    => 'iamirnet.minimall::lang.settings.shipping.title',
-                'icon'        => 'icon-credit-card',
+                'icon'        => 'icon-cog',
                 'class'       => EbazarSettings::class,
                 'order'       => 800,
                 'permissions' => ['iamirnet.ebazar.access_ebazar']
